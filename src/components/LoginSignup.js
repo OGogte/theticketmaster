@@ -1,14 +1,11 @@
 import React, { useState } from 'react'
 import styles from "../styles/LoginSignup.module.css";
-import '../App.css'
-import train from '../assets/train.png';
-import tmlogo from '../assets/logo.png';
 import TextField from '@mui/material/TextField';
-
+import {useNavigate} from "react-router-dom";
 const LoginSignup = () => {
 
         const [value,setValue] = useState('signup');
-
+        const navigate = useNavigate();
         const handleRadio = (e) => {
             let temp = e.target.value;
             console.log("Hello")
@@ -57,7 +54,7 @@ const LoginSignup = () => {
                 <form style={{marginTop:"100px"}} className={styles.txtflds}>
                 <TextField margin='dense' type='email' id="outlined-basic" label="Email" variant="outlined" />
                 <TextField margin='dense' type='password ' id="outlined-basic" label="Password" variant="outlined" />
-                    <button className={styles.butts} type="submit">Login</button>
+                    <button onClick={()=> navigate('/home')} className={styles.butts} type="submit">Login</button>
                 </form>
                 <div className={styles.prompts}>Don't have an account yet ? Sign up <span onClick={()=> setValue('signup')} className={styles.smallbutts}>here</span></div>
             </div>
@@ -67,12 +64,12 @@ const LoginSignup = () => {
    
         return (
             <div className={styles.mainBox}>
-                <img src={tmlogo} alt='Theticketmaster'></img>
+                
                 {value === 'signup' ? renderSignup() : renderLogin()}
-            <img className={styles.bottomImg} src={train} alt='train'></img>
+            
         </div>
         )
     
 }
 
-export default LoginSignup;
+export default LoginSignup; 
