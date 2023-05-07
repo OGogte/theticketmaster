@@ -10,7 +10,7 @@ const Navbar = (props) => {
                 <Link to="/home" style={props.selected === 'home' ? {color: '#4535be',textDecoration:"underline"} : {color: '#908cb6'}} className={styles["nav-link"]}>HOME</Link>
                 </li>
                 <li className={styles["nav-item"]}>
-                <Link to="/" style={props.selected === 'stations' ? {color: '#4535be',textDecoration:"underline"} : {color: '#908cb6'}} className={styles["nav-link"]}>STATIONS</Link>
+                <Link to="/stations" style={props.selected === 'stations' ? {color: '#4535be',textDecoration:"underline"} : {color: '#908cb6'}} className={styles["nav-link"]}>STATIONS</Link>
                 </li>
                 <li className={styles["nav-item"]}>
                 <Link style={props.selected === 'account' ? {color: '#4535be',textDecoration:"underline"} : {color: '#908cb6'}} className={styles["nav-link"]}>ACCOUNT</Link>
