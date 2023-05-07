@@ -1,0 +1,38 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    background-color: transparent;
+    padding: 0 20px;
+    position: absolute;
+    right: 0;
+    top: 15px;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-item {
+    margin-right: 50px;
+  }
+  
+  @font-face {
+    font-family: Malt;
+    src: url('../fonts/MontserratAlternates.ttf');
+  }
+
+  .nav-link {
+    color: #908cb6;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Malt;
+    font-weight: 600;
+  }
+
+  .nav-link:hover {
+    color: #4535be;
+  }
+  
