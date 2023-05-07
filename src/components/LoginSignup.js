@@ -17,7 +17,7 @@ const LoginSignup = () => {
         }
 
         const renderSignup = () => {
-            
+
             return (
                 <section className={styles.sec2}>
             <div className={styles["main-inputs"]}>
@@ -41,7 +41,7 @@ const LoginSignup = () => {
         }
 
         const renderLogin = () => {
-            
+
             return (
             <section className={styles.sec1}>
             <div className={styles["main-inputs"]}>
@@ -56,20 +56,20 @@ const LoginSignup = () => {
                 <TextField margin='dense' type='password ' id="outlined-basic" label="Password" variant="outlined" />
                     <button onClick={()=> navigate('/home')} className={styles.butts} type="submit">Login</button>
                 </form>
-                <div className={styles.prompts}>Don't have an account yet ? Sign up <span onClick={()=> setValue('signup')} className={styles.smallbutts}>here</span></div>
+                <div className={styles.prompts}>Don't have an account yet? Sign up <span onClick={()=> setValue('signup')} className={styles.smallbutts}>here</span></div>
             </div>
             </section>
             )
         }
-   
+
         return (
             <div className={styles.mainBox}>
-                
+
                 {value === 'signup' ? renderSignup() : renderLogin()}
-            
+
         </div>
         )
-    
+
 }
 
-export default LoginSignup; 
+export default LoginSignup;
