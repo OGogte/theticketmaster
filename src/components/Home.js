@@ -5,6 +5,8 @@ import MenuItem from '@mui/material/MenuItem';
 import InputLabel from '@mui/material/InputLabel';
 import { useState } from "react";
 import marker from '../assets/location.png';
+import seat from '../assets/seat.png';
+import quota from '../assets/quota.png';
 import { FormControl } from "@mui/material";
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -29,17 +31,17 @@ const Home = () => {
 
     return (
         <div>
-            <Navbar />
+            <Navbar selected="home"/>
             <div className={styles.invisDab}>
                 <div className={styles.homeTitle}>BOOK YOUR NEXT TRAIN TICKET</div>
                 <div className={styles.mainDabba}>
                     <div className={styles.sode}>
                         <div>
-                            <img src={marker} alt="source"></img>
-                            <FormControl fullwidth>
+                            <img src={marker} style={{marginTop:"10px",marginRight:"20px"}} alt="source"></img>
+                            <FormControl>
                                 <InputLabel id="demo-simple-select-label">Source</InputLabel>
                                 <Select
-                                style={{width:"300px"}}
+                                style={{width:"258px"}}
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
                                 value={formDetails.source}
@@ -53,13 +55,13 @@ const Home = () => {
                                 </Select>
                             </FormControl>
                         </div>
-                        <img src={landr} alt="destination"></img>
+                        <img style={{cursor:"pointer"}} src={landr} alt="destination"></img>
                         <div>
-                            <img src={marker} alt="destination"></img>
-                            <FormControl fullwidth>
+                            <img src={marker}  style={{marginTop:"10px",marginRight:"20px"}} alt="destination"></img>
+                            <FormControl>
                                 <InputLabel id="demo-simple-select-label">Destination</InputLabel>
                                 <Select
-                                style={{width:"300px"}}
+                                style={{width:"258px"}}
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
                                 value={formDetails.destination}
@@ -74,13 +76,13 @@ const Home = () => {
                             </FormControl>
                         </div>  
                     </div>
-                    <div className={styles.sode}>
+                    <div style={{marginTop:"50px"}} className={styles.sode}>
                         <div>
-                            <img src={marker} alt="seat class"></img>
-                            <FormControl fullwidth>
+                            <img src={seat} style={{marginTop:"10px",marginRight:"20px"}} alt="seat class"></img>
+                            <FormControl>
                                 <InputLabel id="demo-simple-select-label">Seat Class</InputLabel>
                                 <Select
-                                style={{width:"300px"}}
+                                style={{width:"258px"}}
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
                                 value={formDetails.seatClass}
@@ -95,11 +97,11 @@ const Home = () => {
                             </FormControl>
                         </div>
                         <div>
-                            <img src={marker} alt="quota"></img>
-                            <FormControl fullwidth>
+                            <img src={quota} style={{marginTop:"10px",marginRight:"20px"}} alt="quota"></img>
+                            <FormControl>
                                 <InputLabel id="demo-simple-select-label">Quota</InputLabel>
                                 <Select
-                                style={{width:"300px"}}
+                                style={{width:"258px"}}
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
                                 value={formDetails.quota}
@@ -115,7 +117,7 @@ const Home = () => {
                         </div>
                         <div>
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
-                        <DatePicker />
+                            <DatePicker label="Date"/>
                         </LocalizationProvider>
                         </div>    
                     </div>
