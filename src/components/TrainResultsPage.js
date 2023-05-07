@@ -1,9 +1,12 @@
 import React from 'react';
 import styles from '../styles/TrainResultPage.module.css';
 import TrainResult from './TrainResult';
+import TextField from '@mui/material/TextField';
+import { useNavigate } from 'react-router-dom';
 
 function TrainResultsPage(props) {
   const { trains, from, to, date } = props;
+  const navigate = useNavigate();
   const train = [
     {
       id: 1,
@@ -37,14 +40,14 @@ function TrainResultsPage(props) {
   return (
     <div className={styles.trainResultsPage}>
       <div className={styles.searchBar}>
-        <div className={styles.searchLabel}>Modify search:</div>
-        <div className={styles.searchDetails}>
-          <div className={styles.searchDetail}>{from}</div>
-          <div className={styles.searchDetail}>to</div>
-          <div className={styles.searchDetail}>{to}</div>
-          <div className={styles.searchDetail}>{date}</div>
-        </div>
-        <div className={styles.searchAction}>Change</div>
+      <div className={styles.allTxt}>
+          <TextField style={{marginRight:"20px",marginLeft:"20px"}} value={"Pune"} InputProps={{readOnly: true,}} margin='dense' type='text' id="outlined-basic" label="Source" variant="outlined" />
+          <TextField style={{marginRight:"20px"}} value={"Pune"} InputProps={{readOnly: true,}}  margin='dense' type='text' id="outlined-basic" label="Destination" variant="outlined" />
+          <TextField style={{marginRight:"20px"}} value={"Pune"} InputProps={{readOnly: true,}}  margin='dense' type='text' id="outlined-basic" label="Seat Class" variant="outlined" />
+          <TextField style={{marginRight:"20px"}} value={"Pune"} InputProps={{readOnly: true,}}  margin='dense' type='text' id="outlined-basic" label="Quota" variant="outlined" />
+          <TextField style={{marginRight:"20px"}} value={"Pune"} InputProps={{readOnly: true,}}  margin='dense' type='text' id="outlined-basic" label="Date" variant="outlined" />
+        </div>           
+        <div style={{fontFamily: "Poppins"}} onClick={()=>navigate("/home")} className={styles.butts}>Modify Search</div>
       </div>
       <div className={styles.trainList}>
         {train.map(train => (

@@ -9,6 +9,7 @@ import CSVUploader from './components/CSVUploader';
 import DetailStepper from './components/DetailStepper';
 import Process from './components/Process';
 import { useNavigate } from 'react-router-dom';
+import TrainResultsPage from './components/TrainResultsPage';
 
 function App() {
     
@@ -19,6 +20,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Process />} />
                     <Route path="home" element={<Home />} />
+                    <Route path="stations" element={<TrainResultsPage />} />
                     <Route path="csv" index element={<CSVUploader />} />
                 </Routes>
             {/* <LoginSignup /> */}
