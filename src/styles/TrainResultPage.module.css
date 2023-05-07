@@ -1,0 +1,41 @@
+.trainResultsPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+.searchLabel {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.searchDetails {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-right: 1.5rem;
+}
+
+.searchDetail {
+  margin-right: 0.5rem;
+}
+
+.searchAction {
+  font-size: 1.2rem;
+  color: #1C69E7;
+  cursor: pointer;
+}
+
+.trainList {
+  width: 80%;
+}
