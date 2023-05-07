@@ -13,6 +13,7 @@
 }
 
 .innerBox {
+    font-family: Malt;
     background: #D9D0FF;
     border: 2px dashed #3626A7;
     border-radius: 30px;
@@ -42,6 +43,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 15rem;
+    padding-top: 9rem;
     align-items: center;
+}
+
+.Header {
+    font-family: Poppins;
+    font-size: 3rem;
 }

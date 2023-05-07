@@ -23,7 +23,7 @@ const myBucket = new AWS.S3({
 
 const NULL = "___NULL_ALERT____"
 const sleep = ms => new Promise(r => setTimeout(r, ms));
-const DEFAULT_TEXT = "Drag 'n' drop some files here, or click Upload"
+const DEFAULT_TEXT = "Drag 'n' drop .CSV file here, or click Upload"
 
 function CSVUploader() {
     let [notification, setNotification] = useState(NULL)
@@ -56,18 +56,20 @@ function CSVUploader() {
             })
         notify(`${file.name} Uploaded Succesfully!`, "success")
     }, [])
-    const { getRootProps, _, isDragActive } = useDropzone({ onDrop })
+    const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
 
     return (
         <div className={styles.adminUpload}>
-            {notification !== NULL ? <_Alert text={notification} severity={severity}/> : ""}
+            <input {...getInputProps()} style={{ display: 'none' }} />
+            {notification !== NULL ? <_Alert text={notification} severity={severity} /> : ""}
+            <h1 className={styles.Header}> Upload Train Schedule </h1>
             <div className={styles.mainBox} {...getRootProps()}>
                 <div className={styles.innerBox} >
                     {
                         isDragActive ?
                             <p>Drop the files here ...</p> :
                             <>
-                                <p>{ DEFAULT_TEXT } </p>
+                                <p>{DEFAULT_TEXT} </p>
                                 <button className={styles.upload_btn}>Upload</button>
                             </>
                     }
