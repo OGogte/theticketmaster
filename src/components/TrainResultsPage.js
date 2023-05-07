@@ -3,6 +3,7 @@ import styles from '../styles/TrainResultPage.module.css';
 import TrainResult from './TrainResult';
 import TextField from '@mui/material/TextField';
 import { useNavigate } from 'react-router-dom';
+import Navbar from './Navbar';
 
 function TrainResultsPage(props) {
   const { trains, from, to, date } = props;
@@ -39,6 +40,7 @@ function TrainResultsPage(props) {
   
   return (
     <div className={styles.trainResultsPage}>
+      <Navbar selected="stations"/>
       <div className={styles.searchBar}>
       <div className={styles.allTxt}>
           <TextField style={{marginRight:"20px",marginLeft:"20px"}} value={"Pune"} InputProps={{readOnly: true,}} margin='dense' type='text' id="outlined-basic" label="Source" variant="outlined" />
