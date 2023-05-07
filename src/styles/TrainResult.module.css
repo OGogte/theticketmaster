@@ -1,0 +1,110 @@
+.mainComponent{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between;
+  align-items: center; */
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.trainResult {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: left;
+  margin-bottom: 10px;
+  /* padding: 10px; */
+  /* background-color: #f5f5f5; */
+  /* border-radius: 5px; */
+  /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2); */
+}
+
+.trainNumber {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 1px;
+}
+
+.trainDeparture {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 2px;
+}
+
+.trainArrival {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 2px;
+}
+
+.trainButtons {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  margin-right: 2px;
+}
+
+.trainButton {
+  background-color: #3626A7; 
+  border: none;
+  color: white;
+  padding: 10px;
+  /* padding: 32px; */
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  /* margin: 4px 2px; */
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  /* width: 100%; */
+  margin-right: 50px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-weight: 600;
+  /* margin-left: 45%; */
+}
+.trainButtonn {
+  background-color: #3626A7; 
+  border: none;
+  color: white;
+  /* padding: 32px; */
+  padding: 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  /* margin: 4px 2px; */
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  /* width: 100%; */
+  margin-left: 800px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-weight: 600;
+  /* margin-left: 45%; */
+}
+.trainDuration {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.trainPrice {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.trainSeatsAvailable {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
