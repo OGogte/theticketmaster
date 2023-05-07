@@ -1,0 +1,146 @@
+.bottomImg{
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.txtflds{
+  display:flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 20px;
+}
+
+.prompts{
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 10%;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.smallbutts{
+  color:#3626A7;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.butts{
+        background-color: #3626A7; 
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        width: 50%;
+        margin-left: 26%;
+        margin-top: 30px;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-weight: 600;
+}
+
+.flds{
+  margin-top: 20px;
+}
+
+.butts:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.main-inputs{
+    background-color: #E0DAFF;
+    width: 30%;
+    height: 75%;
+    overflow: auto;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    border-radius: 20px;
+    border: 3px solid black;
+  }
+  
+  .login{
+    height: 50%;
+  }
+  
+  .svg-bind{
+    padding: 4px;
+    background-color: rgb(231, 223, 223);
+    border: 2px solid black;
+    border-right: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  
+  }
+  
+  @media screen and (max-width: 900px) {
+    .main-inputs{ 
+      width: 50%;
+      height: 65%;
+    }
+  }
+  
+  @media screen and (max-height: 580px) {
+    .title-page { visibility: hidden; }
+    .main-inputs{height: 75%;}
+  }
+  
+  .login{
+    height: 50%;
+  }
+  
+  .choices{
+    position: relative;
+    margin: 0;
+    margin-bottom: 40px;
+    top:-1px;
+  }
+  
+  input[type="radio"]{
+    display:none;
+  }
+
+  .choices label{
+    display: inline-block;
+    color: white;
+    font-weight: 600;
+    background-color: #3626A7;
+    padding: 5% 0%;
+    font-family: Arial;
+    font-size: 130%;
+    cursor: pointer;
+    width: 50%;
+    text-align: center;
+    border-bottom: 3px solid black;
+    margin: 0;
+  }
+  
+  
+  .choices input[type="radio"]:checked+label {
+    background-color: #191061; 
+    color: white;
+  }
+
+  #lab1{
+    border-right: 3px solid black;
+  }
+
+  #lab2{
+    border-left: 3px solid black;
+  }
+  
+  
+  
