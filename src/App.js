@@ -5,6 +5,8 @@ import tmlogo from './assets/logo.png';
 import Navbar from './components/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
+import DetailStepper from './components/DetailStepper';
+import Process from './components/Process';
 
 function App() {
   return (
@@ -12,8 +14,8 @@ function App() {
       <img src={tmlogo} alt='Theticketmaster'></img>
       <BrowserRouter>
       <Routes>
-          <Route path="/" element={<LoginSignup />} />
-          <Route path= "home" index element={<Home />} />
+          <Route path="/" element={<Process />} />
+          <Route path= "home" element={<Home />} />
       </Routes>
       </BrowserRouter>
 
