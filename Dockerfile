@@ -1,7 +1,6 @@
 FROM node:20-alpine3.16 as development
 
 ENV NODE_ENV development
-
 WORKDIR /react-app
 
 # Install Dependencies
@@ -11,6 +10,9 @@ RUN npm install
 
 COPY . .
 
-CMD npm start
+ENV HOST="0.0.0.0"
+ENV PORT="80"
 
-EXPOSE 3000
+EXPOSE 80
+
+CMD [ "npm" , "start" ]
