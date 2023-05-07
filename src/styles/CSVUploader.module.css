@@ -1,0 +1,39 @@
+.mainBox {
+    background: #E0DAFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 20rem;
+    min-height: 20rem;
+    max-width: 40rem;
+    min-width: 20rem;
+    padding: 0rem;
+}
+
+.innerBox {
+    background: #D9D0FF;
+    border: 2px dashed #3626A7;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 37rem;
+    min-width: 37rem;
+    max-height: 17rem;
+    min-height: 17rem;
+    padding: 0.45rem;
+}
+
+.upload_btn {
+  margin: 1rem;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 7px;
+  color: white;
+  font-family: Poppins;
+  background-color: #3626A7;
+}

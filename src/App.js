@@ -16,7 +16,7 @@ function App() {
           <Route path= "home" index element={<Home />} />
       </Routes>
       </BrowserRouter>
-        
+
         {/* <LoginSignup /> */}
       <img className={styles.bottomImg} src={train} alt='train'></img>
     </div>
