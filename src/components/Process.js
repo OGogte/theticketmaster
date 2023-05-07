@@ -7,6 +7,7 @@ import Navbar from "./Navbar";
 import PassengerDetails from "./PassengerDetails";
 import ReviewDetails from "./ReviewDetails";
 import Payment from "./Payment";
+import Done from "./Done";
 
 const Process = () => {
 
@@ -44,7 +45,7 @@ const Process = () => {
                 {activeStep === 1 && <ReviewDetails passengers={passengers}/>}
                 {activeStep === 2 && <Payment activeStep={activeStep} setActiveStep={setActiveStep} passengers={passengers}/>}
                 {activeStep === 3 ? (
-                    <div>Done</div>
+                    <Done />
                 ) : (
                     <div>
                     <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
