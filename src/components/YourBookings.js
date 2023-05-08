@@ -1,5 +1,6 @@
 import { useState,useRef,useEffect} from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
+import styles from '../styles/YourBookings.module.css';
 import Navbar from "./Navbar";
 
 const YourBookings = () => {
@@ -83,6 +84,7 @@ const YourBookings = () => {
     return(
         <div>
             <Navbar selected="yourbookings"/>
+            <div className={styles.maincomponent}>
             <div>
                 <div>
                     Departure Date: {departure.toLocaleString().substring(0,8)}
@@ -99,9 +101,11 @@ const YourBookings = () => {
                 <div>
                     Status: {status}
                 </div>
-                <ProgressBar completed={parseInt(progress) >= 100 ? 100 : parseInt(progress) <= 0 ? 0 : parseInt(progress) } bgColor="grey" animateOnRender={true} />
+                <div className="progress-bar">
+                <ProgressBar completed={parseInt(progress) >= 100 ? 100 : parseInt(progress) <= 0 ? 0 : parseInt(progress) } bgColor= " #3626A7" animateOnRender={true} className={styles.progressbar}/>
             </div>
-            
+            </div>
+            </div>
         </div>
     );
 }
