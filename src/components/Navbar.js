@@ -13,7 +13,7 @@ const Navbar = (props) => {
                 <Link to="/stations" style={props.selected === 'stations' ? {color: '#4535be',textDecoration:"underline"} : {color: '#908cb6'}} className={styles["nav-link"]}>STATIONS</Link>
                 </li>
                 <li className={styles["nav-item"]}>
-                <Link style={props.selected === 'account' ? {color: '#4535be',textDecoration:"underline"} : {color: '#908cb6'}} className={styles["nav-link"]}>ACCOUNT</Link>
+                <Link to="/yourbookings" style={props.selected === 'yourbookings' ? {color: '#4535be',textDecoration:"underline"} : {color: '#908cb6'}} className={styles["nav-link"]}>YOUR BOOKINGS</Link>
                 </li>
                 <li className={styles["nav-item"]}>
                 <Link style={props.selected === 'support' ? {color: '#4535be',textDecoration:"underline"} : {color: '#908cb6'}} className={styles["nav-link"]}>SUPPORT</Link>
