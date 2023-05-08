@@ -21,10 +21,10 @@ const PassengerDetails = (props) => {
                 <div key={index} style={{marginLeft:"50px",marginTop:"25px",marginRight:"50px",}}>
                     <div style={{fontWeight:"600",fontSize:"20px",marginBottom:"5px"}}>Passenger {index + 1}</div>
                     <div className={styles.allTxt}>
-                    <TextField id={index} value={passenger.first_name} name='first_name' key={index} onChange={handleChange} margin='dense' type='text' label="First Name" variant="outlined" />
-                    <TextField id={index} value={passenger.last_name} name='last_name' key={index} onChange={handleChange} margin='dense' type='text' label="Last Name" variant="outlined" />
-                    <TextField id={index} value={passenger.age} name='age' key={index} onChange={handleChange} margin='dense' type='text' label="Age" variant="outlined" />
-                    <TextField id={index} value={passenger.gender} name='gender' key={index} onChange={handleChange} margin='dense' type='text' label="Gender" variant="outlined" />
+                    <TextField id={index} value={passenger.first_name} name='first_name'onChange={handleChange} margin='dense' type='text' label="First Name" variant="outlined" />
+                    <TextField id={index} value={passenger.last_name} name='last_name' onChange={handleChange} margin='dense' type='text' label="Last Name" variant="outlined" />
+                    <TextField id={index} value={passenger.age} name='age' onChange={handleChange} margin='dense' type='text' label="Age" variant="outlined" />
+                    <TextField id={index} value={passenger.gender} name='gender' onChange={handleChange} margin='dense' type='text' label="Gender" variant="outlined" />
                     </div>
                 </div>
              );
