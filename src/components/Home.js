@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import InputLabel from '@mui/material/InputLabel';
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import marker from '../assets/location.png';
 import seat from '../assets/seat.png';
 import quota from '../assets/quota.png';
@@ -12,21 +12,42 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import landr from '../assets/landr.png';
+import { useNavigate } from "react-router-dom";
+import {book} from '../client/client';
+import axios from 'axios';
 
-const Home = () => {
+const Home = (props) => {
     
-    const [formDetails,setFormDetails] = useState({
-        source : '',
-        destination: '',
-        seatClass: '',
-        quota: '',
-        date: ''
-    });
+    const navigate = useNavigate();
     
     const handleChange = (e) => {
-        let temp = {...formDetails};
+        let temp = {...props.formDetails};
         temp[e.target.name] = e.target.value;
-        setFormDetails(temp);
+        props.setFormDetails(temp);
+        console.log(temp);
+    }
+
+    const handleDateChange = (date) => {
+        let temp = {...props.formDetails};
+        temp['date'] = date.toLocaleString();
+        props.setFormDetails(temp);
+      }
+
+      const handleSearch =  (e) => {
+        //e.preventDefault();
+        // axios.post('https://railwaybooking.azurewebsites.net/reservation', {
+        //     source: "abc",
+        //     destination: "ghi",
+        //     date_time: "2023-05-07T18:04:07.708Z"
+        // })
+        // .then(response => {
+        //     console(response.data);
+        // })
+        // .catch(error => {
+        //     console.error('Error submitting form:', error);
+        // });
+        //book("abc","ghi","2023-05-07T18:04:07.708Z");
+        navigate("/stations");
     }
 
     return (
@@ -44,7 +65,7 @@ const Home = () => {
                                 style={{width:"258px"}}
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
-                                value={formDetails.source}
+                                value={props.formDetails.source}
                                 label="Source"
                                 name="source"
                                 onChange={handleChange}
@@ -64,7 +85,7 @@ const Home = () => {
                                 style={{width:"258px"}}
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
-                                value={formDetails.destination}
+                                value={props.formDetails.destination}
                                 label="Destination"
                                 name="destination"
                                 onChange={handleChange}
@@ -85,14 +106,13 @@ const Home = () => {
                                 style={{width:"258px"}}
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
-                                value={formDetails.seatClass}
+                                value={props.formDetails.seatClass}
                                 label="Seat Class"
                                 name="seatClass"
                                 onChange={handleChange}
                                 >
-                                    <MenuItem value={'Mumbai'}>Mumbai</MenuItem>
-                                    <MenuItem value={'Pune'}>Pune</MenuItem>
-                                    <MenuItem value={'Satara'}>Satara</MenuItem>
+                                    <MenuItem value={'AC'}>AC</MenuItem>
+                                    <MenuItem value={'Sleeper'}>Sleeper</MenuItem>
                                 </Select>
                             </FormControl>
                         </div>
@@ -104,25 +124,25 @@ const Home = () => {
                                 style={{width:"258px"}}
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
-                                value={formDetails.quota}
+                                value={props.formDetails.quota}
                                 label="Quota"
                                 name="quota"
                                 onChange={handleChange}
                                 >
-                                    <MenuItem value={'Mumbai'}>Mumbai</MenuItem>
-                                    <MenuItem value={'Pune'}>Pune</MenuItem>
-                                    <MenuItem value={'Satara'}>Satara</MenuItem>
+                                    <MenuItem value={'Ladies'}>Ladies</MenuItem>
+                                    <MenuItem value={'General'}>General</MenuItem>
+                                    <MenuItem value={'PWD'}>PWD</MenuItem>
                                 </Select>
                             </FormControl>
                         </div>
                         <div>
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
-                            <DatePicker label="Date"/>
+                            <DatePicker onChange={handleDateChange} label="Date"/>
                         </LocalizationProvider>
                         </div>    
                     </div>
                     <div>
-                        <button className={styles.butts}>Search</button>
+                        <button onClick={handleSearch} className={styles.butts}>Search</button>
                     </div>
                 </div>
             </div>

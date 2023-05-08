@@ -65,26 +65,30 @@ const Done = (props) => {
             <img style={{width:"100%",marginTop:"10px"}} src={train} alt='train'></img>
                 <img style={{marginLeft:"20%",marginTop:"30px"}} src={tmlogo} alt='tmlogo'></img>
                 <div style={{fontSize:"20px",marginLeft: "20%",marginTop:"30px"}}>
-                    PNR: 22111
+                    PNR: 217735810738
                 </div>
                 <div style={{fontSize:"20px",marginLeft: "20%",marginTop:"30px"}}>
-                    Boarding Station Code: 56
+                    Boarding Station Code: ytfuyir23dfsdf
                 </div>
                 <div style={{fontSize:"20px",marginLeft: "20%",marginTop:"30px"}}>
-                    Exiting Station Code: 23
+                    Exiting Station Code: KJFyfjgsajhgcyg
                 </div>
                 <div style={{fontSize:"20px",marginLeft: "20%",marginTop:"30px"}}>
-                    Boarding Time: 9:30 a.m
+                    Departure Time: {props.formDetails.departuretime}
                 </div>
                 <div style={{fontSize:"20px",marginLeft: "20%",marginTop:"30px"}}>
-                    Exiting Time: 12:30 a.m
+                    Arrival Time: {props.formDetails.arrivaltime}
                 </div>
                 <div style={{fontSize:"20px",marginLeft: "20%",marginTop:"30px"}}>
-                    Passenger Name: Neel Patwardhan
+                    Passenger Count : {props.passengers.length}
                 </div>
-                <div style={{fontSize:"20px",marginLeft: "20%",marginTop:"30px"}}>
-                    Seat Number: 12D
-                </div>
+                {props.passengers.map((passenger,index) => {
+                    return (
+                        <div style={{fontSize:"20px",marginLeft: "20%",marginTop:"30px"}} key={index} >
+                            Passenger {index+1} Name : {passenger.first_name} {passenger.last_name}
+                        </div>
+                    );
+                })}
                 <img style={{width:"100%",marginTop:"30px"}} src={train} alt='train'></img>
             </div>
             <div style={{fontSize:"20px",textAlign: "center",marginTop:"30px",marginBottom:"30px"}}>Download your ticket by pressing the button given <span style={{color:"#3626A7"}}>below</span> !</div>

@@ -1,0 +1,64 @@
+    .trainSchedule {
+        margin: auto;
+        width: 80%;
+    }
+    
+    th, td {
+        padding: 10px;
+    }
+    
+    th {
+        background-color: #007bff;
+        color: #fff;
+    }
+    
+    td {
+        text-align: center;
+    }
+    
+    .arrivalTimeInput {
+        width: 80px;
+    }
+    
+    .editButtonCell {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+    
+    .editButton {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: #fff;
+        padding: 8px 16px;
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .editButton:hover {
+        background-color: #0062cc;
+        border-color: #005cbf;
+    }
+    
+    .saveButton {
+        background-color: #28a745;
+        border-color: #28a745;
+        color: #fff;
+        padding: 8px 16px;
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .saveButton:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+    }
+    

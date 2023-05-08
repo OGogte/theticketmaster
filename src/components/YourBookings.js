@@ -1,11 +1,12 @@
 import { useState,useRef,useEffect} from "react";
 import ProgressBar from "@ramonak/react-progress-bar";
+import styles from '../styles/YourBookings.module.css';
 import Navbar from "./Navbar";
 
-const YourBookings = () => {
+const YourBookings = (props) => {
 
-    const[arrivalTime,setArrivalTime] = useState(new Date("2023-05-08T12:27:30"));
-    const[departure,setDeparture] = useState(new Date("2023-05-08T12:26:10"));
+    const[arrivalTime,setArrivalTime] = useState(new Date(`2023-05-08T16${props.formDetails.arrivaltime.substring(2,5)}:00`));
+    const[departure,setDeparture] = useState(new Date(`2023-05-08T13${props.formDetails.departuretime.substring(2,5)}:00`));
     const [currentTime,setCurrentTime] = useState(new Date());
     const [status,setStatus] = useState();
     const [progress,setProgress] = useState();
@@ -39,7 +40,7 @@ const YourBookings = () => {
             str = "Journey Over";
         }
         
-        console.log(temp);
+        console.log(currentTime);
         return str;
     }
 
@@ -83,6 +84,7 @@ const YourBookings = () => {
     return(
         <div>
             <Navbar selected="yourbookings"/>
+            <div className={styles.maincomponent}>
             <div>
                 <div>
                     Departure Date: {departure.toLocaleString().substring(0,8)}
@@ -99,9 +101,11 @@ const YourBookings = () => {
                 <div>
                     Status: {status}
                 </div>
-                <ProgressBar completed={parseInt(progress) >= 100 ? 100 : parseInt(progress) <= 0 ? 0 : parseInt(progress) } bgColor="grey" animateOnRender={true} />
+                <div className={styles["progress-bar"]}>
+                <ProgressBar completed={parseInt(progress) >= 100 ? 100 : parseInt(progress) <= 0 ? 0 : parseInt(progress) } bgColor= " #3626A7" animateOnRender={true} className={styles.progressbar}/>
             </div>
-            
+            </div>
+            </div>
         </div>
     );
 }
