@@ -7,8 +7,8 @@ function TrainResult(props) {
   return (
     <div className={styles.mainComponent}>
       <div className={styles.trainResult}>
+      <div className={styles.trainNumber}>{train.name}</div><br />
         <div className={styles.trainNumber}>{train.number}</div>
-        <div className={styles.trainNumber}>{train.name}</div>
         <div className={styles.trainDeparture}>
         <div className={styles.trainStation}>{train.from}</div>
           <div className={styles.trainTime}>{train.departureTime}</div>
@@ -26,11 +26,12 @@ function TrainResult(props) {
     <div className={styles.trainButtons}>
       <button className={styles.trainButton}>First Class</button>
       <button className={styles.trainButton}>Second Class</button>
-      <button className={styles.trainButtonn}>Refresh</button>
+      <button className={styles.trainButton}>Refresh</button>
     </div>
     <div className={styles.trainSeatsAvailable}>
     <span>Seats Available:12</span> {train.seatsAvailable}
   </div>
+  <div><button className={styles.trainButton}>Book</button></div>
     </div>
   );
 }
