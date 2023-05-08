@@ -4,6 +4,7 @@ const _httpClient = axios.create({
     baseURL: 'https://railwaybooking.azurewebsites.net',
     headers: {
         'Content-Type': 'application/json',
+        "Access-Control-Allow-Origin": "*",
     }
 })
 
