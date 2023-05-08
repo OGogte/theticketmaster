@@ -56,7 +56,7 @@ function TrainResultsPage(props) {
           <TrainResult key={train.id} train={train} />
         ))}
       </div>
-      <button onClick={()=> navigate("/details")}></button>
+      <button onClick={()=> navigate("/details")}>Book</button>
     </div>
   );
 }
