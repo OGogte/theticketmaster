@@ -29,33 +29,33 @@ const Done = (props) => {
             pdf.save('Ticket.pdf');
         })
     }
-    //{
+    // {
 
-        // PNR: 
-        // passenger_details : [ {
-        //     name:
-        //     age:
-        //     gender:
-        //     nationality:
-        //     coach_code: 
-        //     seat_number: 
+    //     PNR: 
+    //     passenger_details : [ {
+    //         name:
+    //         age:
+    //         gender:
+    //         nationality:
+    //         coach_code: 
+    //         seat_number: 
             
-        //     }]
+    //         }]
             
         
-        // boarding_stop: {
+    //     boarding_stop: {
         
-        //     station_code: ,
-        //     arrival_time ,
-        //     stop_time,
-        // }
+    //         station_code: ,
+    //         arrival_time ,
+    //         stop_time,
+    //     }
     
-        // exit_stop: {
+    //     exit_stop: {
         
-        //     station_code: ,
-        //     arrival_time ,
-        //     stop_time,
-        // }
+    //         station_code: ,
+    //         arrival_time ,
+    //         stop_time,
+    //     }
     return(
         <div>
             <div style={{fontSize:"36px",textAlign: "center",marginTop:"30px"}}>
