@@ -13,6 +13,7 @@ async function login(email, password) {
             email,
             password
         });
+        console.log(response);
         if (response.status === 200) { // 200: OK
             return response.data;
         } else if (response.status === 401) { // 401: Unauthorized
