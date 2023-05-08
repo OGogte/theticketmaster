@@ -1,18 +1,21 @@
 FROM node:20-alpine3.16 as development
 
-ENV NODE_ENV development
-WORKDIR /react-app
+WORKDIR /app
 
 # Install Dependencies
 
-COPY ./package.json /react-app
+RUN ls
+COPY ./package.json /app
 RUN npm install
 
 COPY . .
 
-ENV HOST="0.0.0.0"
-ENV PORT="80"
+RUN npm run build --verbose
 
-EXPOSE 80
+FROM nginx:1.23.4
+WORKDIR /usr/share/nginx/html
+RUN rm -rf ./*
 
-CMD [ "npm" , "start" ]
+COPY --from=development /app/build .
+
+ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
