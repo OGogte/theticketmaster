@@ -10,6 +10,7 @@ import DetailStepper from './components/DetailStepper';
 import Process from './components/Process';
 import { useNavigate } from 'react-router-dom';
 import TrainResultsPage from './components/TrainResultsPage';
+import YourBookings from './components/YourBookings';
 
 function App() {
     
@@ -18,9 +19,11 @@ function App() {
         <div className={styles.App}>
             <img style={{cursor:"pointer"}} onClick={()=> navigate('/home')} src={tmlogo} alt='Theticketmaster'></img>
                 <Routes>
-                    <Route path="/" element={<Process />} />
+                    <Route path="/" element={<LoginSignup />} />
                     <Route path="home" element={<Home />} />
                     <Route path="stations" element={<TrainResultsPage />} />
+                    <Route path="yourbookings" element={<YourBookings />} />
+                    <Route path="details" element={<Process />} />
                     <Route path="csv" index element={<CSVUploader />} />
                 </Routes>
             {/* <LoginSignup /> */}
