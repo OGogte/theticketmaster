@@ -33,7 +33,7 @@ const LoginSignup = () => {
                 <TextField margin='dense' type='email' id="outlined-basic" label="Email" variant="outlined" />
                 <TextField margin='dense' type='password' id="outlined-basic" label="Password" variant="outlined" />
                 <TextField margin='dense' type='password ' id="outlined-basic" label="Confirm Password" variant="outlined" />
-                    <button  className={styles.butts} type="submit">Sign Up</button>
+                    <button onClick={()=> setValue('login')}  className={styles.butts} type="submit">Sign Up</button>
                 </form>
             </div>
             </section>

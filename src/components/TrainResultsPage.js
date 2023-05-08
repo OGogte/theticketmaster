@@ -15,9 +15,9 @@ function TrainResultsPage(props) {
       name: "Doronto Express",
       from: "Pune",
       to: "Mumbai",
-      departureTime: "09:00 AM",
+      departureTime: "01:40 AM",
       departureDate: "05/08/2023",
-      arrivalTime: "12:00 PM",
+      arrivalTime: "04:40 AM",
       arrivalDate: "05/08/2023",
       duration: "3 hours",
       price: "Rs 150",
@@ -25,12 +25,12 @@ function TrainResultsPage(props) {
     {
       id: 2,
       number: "5678",
-      name: "Doronto Express",
+      name: "Shatabdi Express",
       from: "Pune",
       to: "Mumbai",
-      departureTime: "01:00 PM",
+      departureTime: "12:40 AM",
       departureDate: "05/08/2023",
-      arrivalTime: "04:00 PM",
+      arrivalTime: "03:40 AM",
       arrivalDate: "05/08/2023",
       duration: "3 hours",
       price: "Rs 160",
@@ -54,7 +54,7 @@ function TrainResultsPage(props) {
       <div className={styles.outerContainer}>
       <div className={styles.trainList}>
         {train.map(train => (
-          <TrainResult key={train.id} train={train} />
+          <TrainResult setFormDetails={props.setFormDetails} formDetails={props.formDetails} key={train.id} train={train} />
         ))}
       </div>
       </div>

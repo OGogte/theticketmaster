@@ -34,7 +34,7 @@ const Home = (props) => {
       }
 
       const handleSearch =  (e) => {
-        e.preventDefault();
+        //e.preventDefault();
         // axios.post('https://railwaybooking.azurewebsites.net/reservation', {
         //     source: "abc",
         //     destination: "ghi",
@@ -46,7 +46,7 @@ const Home = (props) => {
         // .catch(error => {
         //     console.error('Error submitting form:', error);
         // });
-        book("abc","ghi","2023-05-07T18:04:07.708Z");
+        //book("abc","ghi","2023-05-07T18:04:07.708Z");
         navigate("/stations");
     }
 
