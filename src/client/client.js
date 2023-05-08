@@ -50,11 +50,12 @@ async function register(email, password, firstname, lastname) {
 async function book(source, destination, datetime) {
     try {
         const response = await _httpClient.post('reservation', {
-            source,
-            destination,
-            datetime
+            source: source,
+            destination : destination,
+            datetime: datetime
         });
-        if (response.status === 201) { // 201: Created
+        if (response.status === 201) { 
+            console.log(response.data)// 201: Created
             return response.data;
         } else {
             throw new Error(`Unexpected response status: ${response.status}`);
