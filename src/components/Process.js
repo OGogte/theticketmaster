@@ -9,8 +9,8 @@ import ReviewDetails from "./ReviewDetails";
 import Payment from "./Payment";
 import Done from "./Done";
 
-const Process = () => {
-
+const Process = (props) => {
+    
     const [activeStep, setActiveStep] = useState(0);
     const [passengers,setPassengers] = useState([
         {
@@ -43,9 +43,9 @@ const Process = () => {
             <div className={styles.bigBox}>
                 {activeStep === 0 && <PassengerDetails passengers={passengers} setPassengers={setPassengers} addPassenger={addPassenger}/> }
                 {activeStep === 1 && <ReviewDetails passengers={passengers}/>}
-                {activeStep === 2 && <Payment activeStep={activeStep} setActiveStep={setActiveStep} passengers={passengers}/>}
+                {activeStep === 2 && <Payment formDetails={props.formDetails} activeStep={activeStep} setActiveStep={setActiveStep} passengers={passengers}/>}
                 {activeStep === 3 ? (
-                    <Done />
+                    <Done passengers={passengers} formDetails={props.formDetails} />
                 ) : (
                     <div>
                     <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>

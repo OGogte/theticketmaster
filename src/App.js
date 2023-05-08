@@ -21,20 +21,22 @@ function App() {
         destination: '',
         seatClass: '',
         quota: '',
-        date: ''
+        date: '',
+        arrivaltime: '',
+        departuretime: ''
     });
     
     const navigate = useNavigate();
-    login('test@test.com', 'test123')
+    //login('test@test.com', 'test123')
     return (
         <div className={styles.App}>
             <img style={{cursor:"pointer"}} onClick={()=> navigate('/home')} src={tmlogo} alt='Theticketmaster'></img>
                 <Routes>
                     <Route path="/" element={<LoginSignup />} />
                     <Route path="home" element={<Home formDetails={formDetails} setFormDetails={setFormDetails} />} />
-                    <Route path="stations" element={<TrainResultsPage formDetails={formDetails}/>} />
-                    <Route path="yourbookings" element={<YourBookings />} />
-                    <Route path="details" element={<Process />} />
+                    <Route path="stations" element={<TrainResultsPage setFormDetails={setFormDetails} formDetails={formDetails}/>} />
+                    <Route path="yourbookings" element={<YourBookings formDetails={formDetails}/>} />
+                    <Route path="details" element={<Process formDetails={formDetails}/>} />
                     <Route path="csv" index element={<CSVUploader />} />
                 </Routes>
             {/* <LoginSignup /> */}

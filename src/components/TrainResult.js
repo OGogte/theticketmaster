@@ -4,6 +4,18 @@ import { useNavigate } from 'react-router-dom';
 function TrainResult(props) {
   const train = props.train;
   const navigate = useNavigate();
+
+  const handleBook = ()=> {
+    navigate("/details");
+    let temp = {...props.formDetails};
+    temp.arrivaltime = props.train.arrivalTime;
+    temp.departuretime = props.train.departureTime;
+    props.setFormDetails(temp);
+    console.log(temp);
+    
+  }
+
+  
   return (
     <div className={styles.mainComponent}>
       <div className={styles.trainResult}>
@@ -31,7 +43,7 @@ function TrainResult(props) {
     <div className={styles.trainSeatsAvailable}>
     <span>Seats Available:12</span> {train.seatsAvailable}
   </div>
-  <div><button onClick={()=>navigate("/details")} className={styles.trainButton}>Book</button></div>
+  <div><button onClick={handleBook} className={styles.trainButton}>Book</button></div>
     </div>
   );
 }
