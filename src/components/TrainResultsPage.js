@@ -43,11 +43,11 @@ function TrainResultsPage(props) {
       <Navbar selected="stations"/>
       <div className={styles.searchBar}>
       <div className={styles.allTxt}>
-          <TextField style={{marginRight:"20px",marginLeft:"20px"}} value={"Pune"} InputProps={{readOnly: true,}} margin='dense' type='text' id="outlined-basic" label="Source" variant="outlined" />
-          <TextField style={{marginRight:"20px"}} value={"Pune"} InputProps={{readOnly: true,}}  margin='dense' type='text' id="outlined-basic" label="Destination" variant="outlined" />
-          <TextField style={{marginRight:"20px"}} value={"Pune"} InputProps={{readOnly: true,}}  margin='dense' type='text' id="outlined-basic" label="Seat Class" variant="outlined" />
-          <TextField style={{marginRight:"20px"}} value={"Pune"} InputProps={{readOnly: true,}}  margin='dense' type='text' id="outlined-basic" label="Quota" variant="outlined" />
-          <TextField style={{marginRight:"20px"}} value={"Pune"} InputProps={{readOnly: true,}}  margin='dense' type='text' id="outlined-basic" label="Date" variant="outlined" />
+          <TextField style={{marginRight:"20px",marginLeft:"20px"}} value={props.formDetails.source} InputProps={{readOnly: true,}} margin='dense' type='text' id="outlined-basic" label="Source" variant="outlined" />
+          <TextField style={{marginRight:"20px"}} value={props.formDetails.destination} InputProps={{readOnly: true,}}  margin='dense' type='text' id="outlined-basic" label="Destination" variant="outlined" />
+          <TextField style={{marginRight:"20px"}} value={props.formDetails.seatClass} InputProps={{readOnly: true,}}  margin='dense' type='text' id="outlined-basic" label="Seat Class" variant="outlined" />
+          <TextField style={{marginRight:"20px"}} value={props.formDetails.quota} InputProps={{readOnly: true,}}  margin='dense' type='text' id="outlined-basic" label="Quota" variant="outlined" />
+          <TextField style={{marginRight:"20px"}} value={props.formDetails.date} InputProps={{readOnly: true,}}  margin='dense' type='text' id="outlined-basic" label="Date" variant="outlined" />
         </div>           
         <div style={{fontFamily: "Poppins"}} onClick={()=>navigate("/home")} className={styles.butts}>Modify Search</div>
       </div>

@@ -8,7 +8,7 @@ const ReviewDetails = (props) => {
              <div className={styles.passTitle}>REVIEW DETAILS</div>
         {props.passengers.map((passenger,index) => {
             return (
-                <div style={{marginLeft:"50px",marginTop:"25px",marginRight:"50px",}}>
+                <div key={index} style={{marginLeft:"50px",marginTop:"25px",marginRight:"50px",}}>
                     <div style={{fontWeight:"600",fontSize:"20px",marginBottom:"5px"}}>Passenger {index + 1}</div>
                     <div className={styles.allTxt}>
                     <TextField value={passenger.first_name} InputProps={{readOnly: true,}} margin='dense' type='text' id="outlined-basic" label="First Name" variant="outlined" />

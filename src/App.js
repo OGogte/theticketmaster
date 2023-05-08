@@ -12,9 +12,18 @@ import { useNavigate } from 'react-router-dom';
 import TrainResultsPage from './components/TrainResultsPage';
 import YourBookings from './components/YourBookings';
 import {login} from './client/client'
+import { useState } from 'react';
 
 function App() {
-
+    
+    const [formDetails,setFormDetails] = useState({
+        source : '',
+        destination: '',
+        seatClass: '',
+        quota: '',
+        date: ''
+    });
+    
     const navigate = useNavigate();
     login('test@test.com', 'test123')
     return (
@@ -22,8 +31,8 @@ function App() {
             <img style={{cursor:"pointer"}} onClick={()=> navigate('/home')} src={tmlogo} alt='Theticketmaster'></img>
                 <Routes>
                     <Route path="/" element={<LoginSignup />} />
-                    <Route path="home" element={<Home />} />
-                    <Route path="stations" element={<TrainResultsPage />} />
+                    <Route path="home" element={<Home formDetails={formDetails} setFormDetails={setFormDetails} />} />
+                    <Route path="stations" element={<TrainResultsPage formDetails={formDetails}/>} />
                     <Route path="yourbookings" element={<YourBookings />} />
                     <Route path="details" element={<Process />} />
                     <Route path="csv" index element={<CSVUploader />} />
