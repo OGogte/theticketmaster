@@ -26,3 +26,15 @@
   .progress-bar .react-progress-bar-progress {
     background-color: #3626A7;
   }
+
+  .here {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10rem;
+    font-family: Malt;
+  }
+
+  .info {
+    margin: 0.7rem;
+  }

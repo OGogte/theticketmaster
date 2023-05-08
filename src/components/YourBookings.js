@@ -84,25 +84,27 @@ const YourBookings = (props) => {
     return(
         <div>
             <Navbar selected="yourbookings"/>
+            <div className={styles.here}>
             <div className={styles.maincomponent}>
             <div>
-                <div>
+                <div className={styles.info}>
                     Departure Date: {departure.toLocaleString().substring(0,8)}
                 </div>
-                <div>
+                <div className={styles.info}>
                     Departure Time: {departure.toLocaleString().substring(10)}
                 </div>
-                <div>
+                <div className={styles.info}>
                     Arrival Date: {arrivalTime.toLocaleString().substring(0,8)}
                 </div>
-                <div>
+                <div className={styles.info}>
                     Arrival Time: {arrivalTime.toLocaleString().substring(10)}
                 </div>
-                <div>
+                <div className={styles.info}>
                     Status: {status}
                 </div>
                 <div className={styles["progress-bar"]}>
                 <ProgressBar completed={parseInt(progress) >= 100 ? 100 : parseInt(progress) <= 0 ? 0 : parseInt(progress) } bgColor= " #3626A7" animateOnRender={true} className={styles.progressbar}/>
+            </div>
             </div>
             </div>
             </div>
