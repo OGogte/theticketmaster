@@ -51,12 +51,13 @@ function TrainResultsPage(props) {
         </div>           
         <div style={{fontFamily: "Poppins"}} onClick={()=>navigate("/home")} className={styles.butts}>Modify Search</div>
       </div>
+      <div className={styles.outerContainer}>
       <div className={styles.trainList}>
         {train.map(train => (
           <TrainResult key={train.id} train={train} />
         ))}
       </div>
-      <button onClick={()=> navigate("/details")}>Book</button>
+      </div>
     </div>
   );
 }

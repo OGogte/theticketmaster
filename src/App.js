@@ -11,10 +11,12 @@ import Process from './components/Process';
 import { useNavigate } from 'react-router-dom';
 import TrainResultsPage from './components/TrainResultsPage';
 import YourBookings from './components/YourBookings';
+import {login} from './client/client'
 
 function App() {
-    
+
     const navigate = useNavigate();
+    login('test@test.com', 'test123')
     return (
         <div className={styles.App}>
             <img style={{cursor:"pointer"}} onClick={()=> navigate('/home')} src={tmlogo} alt='Theticketmaster'></img>
