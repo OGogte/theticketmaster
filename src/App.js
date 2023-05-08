@@ -10,6 +10,8 @@ import DetailStepper from './components/DetailStepper';
 import Process from './components/Process';
 import { useNavigate } from 'react-router-dom';
 import TrainResultsPage from './components/TrainResultsPage';
+import TrainSchedule from './components/TrainSchedule';
+import DailyReport from './components/Analytics';
 
 function App() {
     
@@ -21,7 +23,9 @@ function App() {
                     <Route path="/" element={<Process />} />
                     <Route path="home" element={<Home />} />
                     <Route path="stations" element={<TrainResultsPage />} />
-                    <Route path="csv" index element={<CSVUploader />} />
+                    <Route path="admin/csv" index element={<CSVUploader />} />
+                    <Route path="admin/delay" index element={<TrainSchedule />} />
+                    <Route path="admin/reports" index element={<DailyReport />} />
                 </Routes>
             {/* <LoginSignup /> */}
             <img className={styles.bottomImg} src={train} alt='train'></img>
