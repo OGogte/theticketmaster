@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from '../styles/TrainResult.module.css'
-
+import { useNavigate } from 'react-router-dom';
 function TrainResult(props) {
   const train = props.train;
-
+  const navigate = useNavigate();
   return (
     <div className={styles.mainComponent}>
       <div className={styles.trainResult}>
@@ -31,7 +31,7 @@ function TrainResult(props) {
     <div className={styles.trainSeatsAvailable}>
     <span>Seats Available:12</span> {train.seatsAvailable}
   </div>
-  <div><button className={styles.trainButton}>Book</button></div>
+  <div><button onClick={()=>navigate("/details")} className={styles.trainButton}>Book</button></div>
     </div>
   );
 }
